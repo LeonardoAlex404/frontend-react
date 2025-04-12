@@ -18,7 +18,7 @@ function App() {
 
     try {
       const res = await fetch('http://3.136.233.178:5000/login', {
-        method: 'POST',
+        mode: 'cors',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
       });
@@ -42,7 +42,7 @@ function App() {
 
     try {
       const res = await fetch('http://3.136.233.178:5000/usuarios', {
-        method: 'POST',
+        mode: 'cors',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           nombre: nuevoNombre,

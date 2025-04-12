@@ -17,7 +17,7 @@ function App() {
     setMensaje("Cargando...");
 
     try {
-      const res = await fetch('http://3.136.233.178:5000/login', {
+      const res = await fetch('http://3.136.233.178/login', {
         mode: 'cors',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
@@ -41,7 +41,7 @@ function App() {
     setMensajeCrear("Creando...");
 
     try {
-      const res = await fetch('http://3.136.233.178:5000/usuarios', {
+      const res = await fetch('http://3.136.233.178/usuarios', {
         mode: 'cors',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -70,7 +70,7 @@ function App() {
   useEffect(() => {
     const obtenerUsuarios = async () => {
       try {
-        const res = await fetch('http://3.136.233.178:5000/usuarios');
+        const res = await fetch('http://3.136.233.178/usuarios');
         const data = await res.json();
         setUsuarios(data);
       } catch (error) {
